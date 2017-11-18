@@ -1,5 +1,4 @@
-HookServe
-=========
+# HookServe
 
 http://godoc.org/github.com/phayes/hookserve/hookserve
 
@@ -17,9 +16,7 @@ for event := range server.Events {
 }
 ```
 
-
-###Command Line Utility
-
+## Command Line Utility
 
 It also comes with a command-line utility that lets you pass webhook push events to other commands. 
 
@@ -27,11 +24,13 @@ It also comes with a command-line utility that lets you pass webhook push events
 $ hookserve --port=8888 logger -t PushEvent #log github webhook push event to the system log (/var/log/message) via the logger command
 ```
 
-#####Command Line Utility Downloads
- - Linux: https://phayes.github.io/bin/current/hookserve/linux/hookserve.gz
+### Command Line Utility Downloads
+
+- Linux: https://phayes.github.io/bin/current/hookserve/linux/hookserve.gz
  - Mac:   https://phayes.github.io/bin/current/hookserve/mac/hookserve.gz
 
-#####Building Command Line Utility From Source
+#### Building Command Line Utility From Source
+
 ```bash
 sudo apt-get install golang                    # Download go. Alternativly build from source: https://golang.org/doc/install/source
 mkdir ~/.gopath && export GOPATH=~/.gopath     # Replace with desired GOPATH
@@ -39,8 +38,7 @@ export PATH=$PATH:$GOPATH/bin                  # For convenience, add go's bin d
 go get github.com/phayes/hookserve/cmd/hookserve
 ```
 
-###Settings up GitHub Webhooks
-
+## Setting up GitHub Webhooks
 
 Setting up webhooks on github is easy. Navigate to `github.com/<name>/<repo>/settings/hooks` and create a new webhook. Setting up your webhook should look something like this:
 
